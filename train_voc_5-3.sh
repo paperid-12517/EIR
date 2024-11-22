@@ -1,8 +1,3 @@
-#!/bin/bash
-PORT='tcp://127.0.0.1:29557'
-GPU=0
-BS=24  # Total 32
-SAVEDIR='/data/yhm/DKD4/region_n/'    #voc_mixup_bg_xiugaibceloss   voc_mixupbg_addtietunum  voc_shaixvantupian_addpseudo
 
 TASKSETTING='overlap'  # or 'disjoint'
 TASKNAME='5-3'
