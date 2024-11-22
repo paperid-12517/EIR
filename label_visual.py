@@ -208,7 +208,7 @@ def main_worker(gpu, ngpus_per_node, config):
                     pred_labels,
                     data['label'])
 
-        save_path = "/mnt/21T/yinhm/DKD/dataset/label_result/%s/" % config['data_loader']['args']['task']['name']
+        save_path = "dataset/label_result/%s/" % config['data_loader']['args']['task']['name']
         save_path = os.path.join(save_path, str(config['data_loader']['args']['task']['step']))
 
         for b in range(data['image'].size(0)):
@@ -228,7 +228,7 @@ def main_worker(gpu, ngpus_per_node, config):
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser(description='Class incremental Semantic Segmentation')
-    args.add_argument('-c', '--config', default='/mnt/21T/yinhm/DKD/configs/config_voc.json', type=str, help='config file path (default: None)') #修改
+    args.add_argument('-c', '--config', default='configs/config_voc.json', type=str, help='config file path (default: None)') #修改
     args.add_argument('-r', '--resume', default=None, type=str, help='path to latest checkpoint (default: None)')
     args.add_argument('-d', '--device', default='3', type=str, help='indices of GPUs to enable (default: all)')
     CustomArgs = collections.namedtuple('CustomArgs', 'flags type action target', defaults=(None, float, None, None))

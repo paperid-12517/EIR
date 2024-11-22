@@ -100,7 +100,7 @@ def main_worker(gpu, ngpus_per_node, config):
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser(description='Class incremental Semantic Segmentation')
-    args.add_argument('-c', '--config', default='/mnt/21T/yinhm/DKD/configs/config_voc.json', type=str, help='config file path (default: None)')
+    args.add_argument('-c', '--config', default='/configs/config_voc.json', type=str, help='config file path (default: None)')
     args.add_argument('-r', '--resume', default=None, type=str, help='path to latest checkpoint (default: None)')
     args.add_argument('-d', '--device', default='6', type=str, help='indices of GPUs to enable (default: all)')
 

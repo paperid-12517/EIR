@@ -15,10 +15,6 @@ MEMORY_SIZE=0  # 100 for DKD-M
 
 NAME='DKD'
 
-# CUDA_VISIBLE_DEVICES=4 python train_voc.py -c configs/config_voc.json \
-# -d ${GPU} --multiprocessing_distributed --dist_url ${PORT} --save_dir ${SAVEDIR} --name ${NAME} \
-# --task_name ${TASKNAME} --task_setting ${TASKSETTING} --task_step 0 --lr ${INIT_LR} --bs ${BS} --pos_weight ${INIT_POSWEIGHT}
-
 CUDA_VISIBLE_DEVICES=6 python train_voc.py -c configs/config_voc.json \
 -d ${GPU} --multiprocessing_distributed --dist_url ${PORT} --save_dir ${SAVEDIR} --name ${NAME} \
 --task_name ${TASKNAME} --task_setting ${TASKSETTING} --task_step 1 --lr ${LR} --bs ${BS} --freeze_bn --mem_size ${MEMORY_SIZE}

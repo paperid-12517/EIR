@@ -103,7 +103,7 @@
     ],
     "trainer": {
         "epochs": 60,
-        "save_dir": "/data/yhm/DKD4/region_n/",
+        "save_dir": "./region_n/",
         "save_period": -1,
         "validation_period": -1,
         "verbosity": 2,

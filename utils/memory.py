@@ -1,9 +1,4 @@
 """
-We modified the code from SSUL
-
-SSUL
-Copyright (c) 2021-present NAVER Corp.
-MIT License
 """
 
 import math
@@ -185,7 +180,6 @@ def memory_sampling_balanced1(config, model, train_loader, task_info, logger, gp
     task_dataset, task_setting, task_name, task_step = task_info
     new_classes, old_classes = get_task_labels(task_dataset, task_name, task_step) 
     prev_num_classes = len(old_classes)  # 15
-    # memory_json = f'./data/{task_dataset}/{task_setting}_{task_name}_memory.json'   voc_mixup_bg_xiugaibceloss/
     memory_json = config.save_dir.parent / f'step_{task_step}' / 'memory.json'   
     memory_size = config['data_loader']['args']['memory']['mem_size']
     if task_step > 1:
@@ -307,7 +301,7 @@ def instance_sampling_balanced(config, model, train_loader, task_info, logger, g
     task_dataset, task_setting, task_name, task_step = task_info
     new_classes, old_classes = get_task_labels(task_dataset, task_name, task_step) 
     prev_num_classes = len(old_classes)  # 15
-    # memory_json = f'./data/{task_dataset}/{task_setting}_{task_name}_memory.json'   voc_mixup_bg_xiugaibceloss/
+
     memory_json = config.save_dir.parent / f'step_{task_step}' / 'memory.json'   
     memory_size = config['data_loader']['args']['memory']['mem_size']
     if task_step > 1:

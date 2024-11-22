@@ -68,7 +68,7 @@ class VOCIncrementalDataLoader():
                 step=self.step,
                 classes_idx_new=self.classes_idx_new,
                 classes_idx_old=self.classes_idx_old,
-                idxs_path ='/data/yhm/DKD4/region_n/models' + '/' + f"{self.task['setting']}_{self.task['name']}_DKD" + '/' + f"step_{self.step}" + '/'+"memory.json",   
+                idxs_path ='region_n/models' + '/' + f"{self.task['setting']}_{self.task['name']}_DKD" + '/' + f"step_{self.step}" + '/'+"memory.json",   
                 **self.train['args'],
             )  
             if concat is True:    

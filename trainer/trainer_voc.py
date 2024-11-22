@@ -403,7 +403,7 @@ class Trainer_incremental(Trainer_base):
             if model_old is not None:
                 self.model_old = nn.DataParallel(model_old, device_ids=self.device_ids)
                 
-        memory_json ='/data/yhm/DKD4/region_n/models' + '/' + f"overlap_{self.config['data_loader']['args']['task']['name']}_DKD" + '/' + f"step_{self.config['data_loader']['args']['task']['step']}" + '/'+"memory.json"     #new baseline
+        memory_json ='DKD4/region_n/models' + '/' + f"overlap_{self.config['data_loader']['args']['task']['name']}_DKD" + '/' + f"step_{self.config['data_loader']['args']['task']['step']}" + '/'+"memory.json"     #new baseline
         with open(memory_json, "r") as json_file:
             memory_list = json.load(json_file)
         file_names = memory_list[f"step_{self.config['data_loader']['args']['task']['step']}"]["memory_list"]

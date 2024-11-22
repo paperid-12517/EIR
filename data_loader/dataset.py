@@ -739,7 +739,6 @@ class ADESegmentationIncrementalMemory(BaseDataset):
 
         else:  # Train or Validation
             # Masking except current classes
-            # SSUL uses fully annotated mask, while we don't
             if self.masking_value is None:
                 return target
             if self.setting in ['disjoint', 'overlap']:
@@ -771,7 +770,6 @@ class ADESegmentationIncrementalMemory(BaseDataset):
         return len(self.images)
 
     def get_image_by_name(self, image_name):
-        #index = self.name_to_index.imagesget(image_name)  tiaoshi: image_name: 2008_000133 3
         try:
             index = self.im_ids.index(image_name)  
         except ValueError:

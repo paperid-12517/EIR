@@ -14,14 +14,6 @@ MEMORY_SIZE=300 # 300 for Ours-M
 
 
 NAME='DKD'
-# CUDA_VISIBLE_DEVICES=0,1,2,3 python train_ade.py -c configs/config_ade.json \
-# -d ${GPU} --multiprocessing_distributed --save_dir ${SAVEDIR} --name ${NAME} \
-# --task_name ${TASKNAME} --task_setting ${TASKSETTING} --task_step 0 --lr ${INIT_LR} --bs ${BS}
-
-# CUDA_VISIBLE_DEVICES=0,1,2,3 python train_ade.py -c configs/config_ade.json \
-# -d ${GPU} --multiprocessing_distributed --save_dir ${SAVEDIR} --name ${NAME} \
-# --task_name ${TASKNAME} --task_setting ${TASKSETTING} --task_step 1 --lr ${LR} --bs ${BS} --freeze_bn --mem_size ${MEMORY_SIZE}
-
 CUDA_VISIBLE_DEVICES=0,1,2,3 python train_ade.py -c configs/config_ade.json \
 -d ${GPU} --multiprocessing_distributed --save_dir ${SAVEDIR} --name ${NAME} \
 --task_name ${TASKNAME} --task_setting ${TASKSETTING} --task_step 2 --lr ${LR} --bs ${BS} --freeze_bn --mem_size ${MEMORY_SIZE}

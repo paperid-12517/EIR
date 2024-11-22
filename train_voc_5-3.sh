@@ -1,3 +1,8 @@
+#!/bin/bash
+PORT='tcp://127.0.0.1:29557'
+GPU=0
+BS=24  # Total 32
+SAVEDIR='region_n/'   
 
 TASKSETTING='overlap'  # or 'disjoint'
 TASKNAME='5-3'

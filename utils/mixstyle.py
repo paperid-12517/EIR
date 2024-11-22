@@ -80,10 +80,7 @@ def image_styletransfer(m_image, image):
     return m_image_normed * sig_n + mu_n
 
 class MixStyle(nn.Module):
-    """MixStyle.
-
-    Reference:
-      Zhou et al. Domain Generalization with MixStyle. ICLR 2021.
+    """
     """
 
     def __init__(self, p=0.5, alpha=0.1, eps=1e-6, mix="random"):
